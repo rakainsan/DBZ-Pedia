@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { CssBaseline } from '@mui/material';
+import BottomNav from './components/BottomNav';
+import Home from './pages/Home';
+import Categories from './pages/Categories';
+import Planet from './pages/Planet';
+import PlanetDetail from './pages/PlanetDetail';
+import Comparison from './pages/Comparison';
+import Profile from './pages/Profile';
+import CharacterDetail from './pages/CharacterDetail';
+import { register as registerServiceWorker } from './serviceWorker';
 
-function App() {
+const App = () => {
+  const queryClient = new QueryClient();
+
+  React.useEffect(() => {
+    registerServiceWorker();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <CssBaseline />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/planet" element={<Planet />} />
+          <Route path="/planet/:id" element={<PlanetDetail />} />
+          <Route path="/compare" element={<Comparison />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/character/:id" element={<CharacterDetail />} />
+        </Routes>
+        <BottomNav />
+      </Router>
+    </QueryClientProvider>
   );
-}
+};
 
 export default App;
