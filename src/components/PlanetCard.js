@@ -7,14 +7,14 @@ const PlanetCard = ({ planet }) => {
       sx={{
         maxWidth: 345,
         marginBottom: 2,
-        borderRadius: 3, // Rounded corners
-        boxShadow: 5, // Shadow for depth
-        overflow: 'hidden', // Ensure content doesn't spill out
-        position: 'relative', // For overlay positioning
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease', // Smooth hover effects
+        borderRadius: 3, 
+        boxShadow: 5, 
+        overflow: 'hidden', 
+        position: 'relative', 
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
         '&:hover': {
-          transform: 'scale(1.05)', // Slight zoom on hover
-          boxShadow: 8, // Stronger shadow on hover
+          transform: 'scale(1.05)', 
+          boxShadow: 8, 
         },
       }}
     >

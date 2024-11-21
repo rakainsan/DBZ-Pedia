@@ -161,23 +161,23 @@ const Comparison = () => {
     sx={{
       width: { xs: '100%', sm: '400px' },
       '& .MuiOutlinedInput-root': {
-        backgroundColor: '#F5F5F5', // Warna abu terang untuk kontras lembut
-        color: '#000', // Warna teks hitam untuk keterbacaan
+        backgroundColor: '#F5F5F5', 
+        color: '#000', 
         '& fieldset': {
-          borderColor: 'rgba(0, 0, 0, 0.3)', // Outline abu gelap
+          borderColor: 'rgba(0, 0, 0, 0.3)', 
         },
         '&:hover fieldset': {
-          borderColor: '#FFA726', // Outline oranye saat hover
+          borderColor: '#FFA726', 
         },
         '&.Mui-focused fieldset': {
-          borderColor: '#FFA726', // Outline oranye saat fokus
+          borderColor: '#FFA726', 
         },
       },
       '& .MuiInputLabel-root': {
-        color: '#666', // Label dengan warna abu-abu
+        color: '#666', 
       },
       '& .MuiInputBase-input::placeholder': {
-        color: 'rgba(0, 0, 0, 0.5)', // Placeholder dengan abu gelap
+        color: 'rgba(0, 0, 0, 0.5)', 
         opacity: 1,
       },
     }}

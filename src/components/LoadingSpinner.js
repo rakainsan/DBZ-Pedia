@@ -16,10 +16,10 @@ const LoadingSpinner = () => {
         style={{
           width: '150px',
           height: 'auto',
-          animation: 'spin 2s linear infinite' // Animasi untuk gambar berotasi
+          animation: 'spin 2s linear infinite' 
         }}
       />
-      <Typography variant="h6" sx={{ mt: 2 }}>Loading...</Typography> {/* Teks indikator */}
+      <Typography variant="h6" sx={{ mt: 2 }}>Loading...</Typography> 
     </Box>
   );
 };

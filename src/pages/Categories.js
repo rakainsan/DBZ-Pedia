@@ -3,15 +3,15 @@ import { useQuery } from 'react-query';
 import { api } from '../services/api';
 import { useNavigate } from 'react-router-dom';
 import { Container, Typography, Select, MenuItem, FormControl, InputLabel, Grid, Button } from '@mui/material';
-import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew'; // Icon for Race
-import TransgenderIcon from '@mui/icons-material/Transgender'; // Icon for Gender
-import GroupIcon from '@mui/icons-material/Group'; // Icon for Affiliation
-import CharacterCard from '../components/CharacterCard'; // Import the CharacterCard component
+import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew'; 
+import TransgenderIcon from '@mui/icons-material/Transgender'; 
+import GroupIcon from '@mui/icons-material/Group'; 
+import CharacterCard from '../components/CharacterCard'; 
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const Categories = () => {
-  const [tabValue, setTabValue] = useState(0);  // Keep track of selected category type (Races, Genders, or Affiliations)
-  const [selectedCategory, setSelectedCategory] = useState('Saiyan'); // Default category
+  const [tabValue, setTabValue] = useState(0);  
+  const [selectedCategory, setSelectedCategory] = useState('Saiyan'); 
   const navigate = useNavigate();
 
   const { data: characters, isLoading } = useQuery(
@@ -42,11 +42,11 @@ const Categories = () => {
   };
 
   const handleCharacterClick = (characterId) => {
-    navigate(`/character/${characterId}`); // Navigate to character detail page
+    navigate(`/character/${characterId}`); 
   };
 
   if (isLoading) {
-    return <LoadingSpinner />; // Ganti bagian loading dengan komponen ini
+    return <LoadingSpinner />; 
   }
 
   return (

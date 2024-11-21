@@ -32,7 +32,7 @@ export const api = {
     try {
       const response = await apiClient.get(`${BASE_URL}`, {
         params: {
-          name: query.trim(), // Directly use the trimmed query
+          name: query.trim(), 
           page,
         },
       });
@@ -49,17 +49,14 @@ export const api = {
     }
   },
 
-  // ... rest of your API methods remain the same
-
-
   getNextCharacters: async (nextUrl) => {
     try {
       const response = await axios.get(nextUrl);
 
-      console.log('Next page response:', response.data); // Log for debugging
+      console.log('Next page response:', response.data); 
 
       if (response.data && Array.isArray(response.data.items)) {
-        return response.data; // Return full response, including meta and links
+        return response.data; 
       } else {
         throw new Error('Data format is not as expected');
       }
@@ -103,10 +100,10 @@ export const api = {
   getPlanets: async (page = 1) => {
     try {
       const response = await axios.get(`${PLANET_URL}?page=${page}`);
-      console.log('Planet API response:', response.data); // Log for debugging
+      console.log('Planet API response:', response.data); 
 
       if (response.data && response.data.items) {
-        return response.data; // Return full data, including metadata
+        return response.data; 
       } else {
         throw new Error('Planet data format is not as expected');
       }

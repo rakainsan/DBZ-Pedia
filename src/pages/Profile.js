@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProfileCard from '../components/ProfileCard';
 import { Container, Typography, Box, Paper, CardMedia } from '@mui/material';
-import LoadingSpinner from '../components/LoadingSpinner'; // Impor LoadingSpinner
+import LoadingSpinner from '../components/LoadingSpinner'; 
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
@@ -21,7 +21,7 @@ const Profile = () => {
   }, []);
 
   if (!profile) {
-    return <LoadingSpinner />; // Ganti teks loading dengan komponen LoadingSpinner
+    return <LoadingSpinner />; 
   }
 
   return (
@@ -45,13 +45,13 @@ const Profile = () => {
         location={profile.location}
       />
 
-      {/* Informasi Aplikasi DBZ */}
+      
       <Box sx={{ mt: 4 }}>
         <Typography variant="h5" sx={{ fontWeight: 'bold', color: '#FFA500', mb: 2 }}>
           Tentang Aplikasi DBZ
         </Typography>
 
-        {/* Logo Aplikasi */}
+        
         <CardMedia
           component="img"
           sx={{
@@ -80,8 +80,8 @@ const Profile = () => {
         </Paper>
       </Box>
 
-      {/* Add spacing at the bottom */}
-      <Box sx={{ mt: 4, mb: 5 }} /> {/* Extra bottom margin */}
+      
+      <Box sx={{ mt: 4, mb: 5 }} /> 
     </Container>
   );
 };

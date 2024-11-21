@@ -14,7 +14,7 @@ const BottomNav = () => {
         bottom: 0,
         left: 0,
         right: 0,
-        borderTop: '1px solid #e0e0e0', // Optional: border at the top for better visibility
+        borderTop: '1px solid #e0e0e0', 
         zIndex: 10,
       }}
       elevation={3}
@@ -26,16 +26,16 @@ const BottomNav = () => {
         }}
         sx={{
           '& .MuiBottomNavigationAction-root': {
-            color: '#757575', // Default color for icons and labels
+            color: '#757575', 
           },
           '& .MuiBottomNavigationAction-root:hover': {
-            color: '#ff9800 !important', // Orange color on hover, make sure it's applied with !important
+            color: '#ff9800 !important', 
           },
           '& .Mui-selected': {
-            color: '#ff9800 !important', // Ensure active state is applied with !important
+            color: '#ff9800 !important', 
           },
           '& .Mui-selected .MuiBottomNavigationAction-label': {
-            fontWeight: 'bold', // Bold label for active state
+            fontWeight: 'bold', 
           },
         }}
       >

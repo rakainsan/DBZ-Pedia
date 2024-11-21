@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, TextField, Grid, Box, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import CharacterCard from '../components/CharacterCard';
-import LoadingSpinner from '../components/LoadingSpinner'; // Impor komponen LoadingSpinner
+import LoadingSpinner from '../components/LoadingSpinner'; 
 import debounce from 'lodash/debounce';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
@@ -107,21 +107,21 @@ const Home = () => {
     mb: 3,
     width: { xs: '100%', sm: '400px' },
     '& .MuiOutlinedInput-root': {
-      backgroundColor: '#F5F5F5', // Warna abu terang
-      color: '#000', // Warna teks hitam
-      borderRadius: 2, // Membulatkan sudut
+      backgroundColor: '#F5F5F5', 
+      color: '#000', 
+      borderRadius: 2, 
       '& fieldset': {
-        borderColor: 'rgba(0, 0, 0, 0.3)', // Outline abu gelap
+        borderColor: 'rgba(0, 0, 0, 0.3)', 
       },
       '&:hover fieldset': {
-        borderColor: '#FFA726', // Outline oranye saat hover
+        borderColor: '#FFA726', 
       },
       '&.Mui-focused fieldset': {
-        borderColor: '#FFA726', // Outline oranye saat fokus
+        borderColor: '#FFA726', 
       },
     },
     '& .MuiInputBase-input::placeholder': {
-      color: 'rgba(0, 0, 0, 0.5)', // Placeholder abu gelap
+      color: 'rgba(0, 0, 0, 0.5)', 
       opacity: 1,
     },
   }}
@@ -135,7 +135,7 @@ const Home = () => {
 />
 </Box>
 
-      {isFetching && <LoadingSpinner />} {/* Ganti dengan LoadingSpinner */}
+      {isFetching && <LoadingSpinner />} 
 
       {!isFetching && (
         <Grid container spacing={2}>
@@ -149,7 +149,7 @@ const Home = () => {
         </Grid>
       )}
 
-      {isSearching && <LoadingSpinner />} {/* Ganti loading dengan LoadingSpinner */}
+      {isSearching && <LoadingSpinner />} 
 
       {charactersToDisplay.length === 0 && !isFetching && !isSearching && (
         <Box display="flex" justifyContent="center" my={4}>

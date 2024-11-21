@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { api } from '../services/api';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useLocation } from 'react-router-dom';
+import LoadingSpinner from '../components/LoadingSpinner';
 import {
   Container,
   Typography,
@@ -13,9 +16,7 @@ import {
   Divider,
   IconButton
 } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useLocation } from 'react-router-dom';
-import LoadingSpinner from '../components/LoadingSpinner'; // Impor komponen LoadingSpinner
+ 
 
 const PlanetDetail = () => {
   const { id } = useParams();
@@ -35,13 +36,13 @@ const PlanetDetail = () => {
 
     return () => {
       if (navbar) {
-        navbar.style.display = 'block'; // Reset when leaving the page
+        navbar.style.display = 'block'; 
       }
     };
   }, [location]);
 
   if (isLoading) {
-    return <LoadingSpinner />; // Ganti dengan komponen LoadingSpinner
+    return <LoadingSpinner />; 
   }
 
   return (

@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { api } from '../services/api';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useLocation } from 'react-router-dom'; 
+import LoadingSpinner from '../components/LoadingSpinner';
 import {
   Container,
   Typography,
@@ -13,9 +16,7 @@ import {
   Divider,
   IconButton
 } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useLocation } from 'react-router-dom'; // For detecting the current route
-import LoadingSpinner from '../components/LoadingSpinner'; // Impor komponen LoadingSpinner
+ 
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -25,24 +26,24 @@ const CharacterDetail = () => {
     () => api.getCharacterById(id)
   );
 
-  const location = useLocation(); // Get the current location
+  const location = useLocation(); 
 
-  // Hide bottom navbar when on character detail page
+  
   useEffect(() => {
-    const navbar = document.getElementById('bottom-navbar'); // Change this to your navbar element ID or class
+    const navbar = document.getElementById('bottom-navbar'); 
     if (navbar) {
       navbar.style.display = location.pathname.includes('character') ? 'none' : 'block';
     }
 
     return () => {
       if (navbar) {
-        navbar.style.display = 'block'; // Reset when leaving the page
+        navbar.style.display = 'block'; 
       }
     };
   }, [location]);
 
   if (isLoading) {
-    return <LoadingSpinner />; // Ganti dengan komponen LoadingSpinner
+    return <LoadingSpinner />; 
   }
 
   return (

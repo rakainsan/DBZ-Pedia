@@ -7,7 +7,7 @@ const CompareCard = ({ character, isSelected, onClick }) => {
 
   return (
     <Card
-      onClick={onClick} // Pastikan ini memanggil fungsi onClick yang di-passed dari parent
+      onClick={onClick} 
       sx={{
         position: 'relative',
         overflow: 'hidden',
@@ -37,7 +37,7 @@ const CompareCard = ({ character, isSelected, onClick }) => {
             transform: 'scale(1.1)',
           },
         }}
-        image={character.image} // Pastikan ini adalah URL gambar yang valid
+        image={character.image} 
         alt={character.name}
       />
 
@@ -72,7 +72,7 @@ const CompareCard = ({ character, isSelected, onClick }) => {
             marginBottom: '6px',
           }}
         >
-          Total Power: {character.maxKi} {/* Pastikan maxKi ada di data karakter */}
+          Total Power: {character.maxKi} 
         </Typography>
       </Box>
     </Card>

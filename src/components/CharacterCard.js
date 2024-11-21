@@ -11,21 +11,21 @@ const CharacterCard = ({ character, onClick }) => {
       sx={{
         position: 'relative',
         overflow: 'hidden',
-        borderRadius: 4, // Rounded corners for a modern look
-        boxShadow: 5, // Slightly stronger shadow for better depth
+        borderRadius: 4, 
+        boxShadow: 5, 
         cursor: 'pointer',
         backgroundColor: '#333',
         color: 'white',
         width: isMobile ? '100%' : 280,
-        margin: '16px auto', // Adds spacing between cards and centers them
-        transition: 'transform 0.3s ease', // Smooth card hover effect
+        margin: '16px auto', 
+        transition: 'transform 0.3s ease', 
         '&:hover': {
-          transform: 'translateY(-8px)', // Slight lift on hover for interactivity
+          transform: 'translateY(-8px)', 
         },
         backgroundImage: 'url("https://www.shutterstock.com/image-photo/see-classic-today-we-present-600nw-2522977275.jpg")', // Replace with the actual image URL
-        backgroundSize: 'cover', // Ensure the image covers the card area
-        backgroundPosition: 'center', // Center the image
-        backgroundRepeat: 'no-repeat', // Ensure the image doesn't repeat
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center', 
+        backgroundRepeat: 'no-repeat', 
       }}
     >
       {/* Gambar Karakter */}
@@ -36,9 +36,9 @@ const CharacterCard = ({ character, onClick }) => {
           objectPosition: 'top',
           width: '100%',
           height: isMobile ? 320 : 360,
-          transition: 'transform 0.3s ease', // Smooth transition for the image scaling
+          transition: 'transform 0.3s ease', 
           '&:hover': {
-            transform: 'scale(1.1)', // Zoom effect on hover
+            transform: 'scale(1.1)', 
           },
         }}
         image={character.image}
@@ -50,17 +50,17 @@ const CharacterCard = ({ character, onClick }) => {
         sx={{
           padding: '16px',
           textAlign: 'center',
-          backgroundColor: 'rgba(0, 0, 0, 0.7)', // Dark background for text section
-          borderRadius: '0 0 4px 4px', // Rounded corners on the bottom
+          backgroundColor: 'rgba(0, 0, 0, 0.7)', 
+          borderRadius: '0 0 4px 4px', 
         }}
       >
         <Typography
           variant="h6"
           sx={{
             fontWeight: 700,
-            fontSize: isMobile ? '1.1rem' : '1.3rem', // Slightly smaller text on mobile
+            fontSize: isMobile ? '1.1rem' : '1.3rem', 
             color: 'white',
-            textTransform: 'uppercase', // Uppercase for emphasis
+            textTransform: 'uppercase', 
             marginBottom: '8px',
           }}
         >
@@ -84,7 +84,7 @@ const CharacterCard = ({ character, onClick }) => {
           sx={{
             fontWeight: 600,
             fontSize: '1rem',
-            color: '#ffeb3b', // Bright yellow for key attributes
+            color: '#ffeb3b', 
             marginBottom: '6px',
           }}
         >
@@ -96,7 +96,7 @@ const CharacterCard = ({ character, onClick }) => {
           sx={{
             fontWeight: 600,
             fontSize: '1rem',
-            color: '#ffeb3b', // Bright yellow for key attributes
+            color: '#ffeb3b', 
             marginBottom: '6px',
           }}
         >
